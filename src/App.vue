@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import { useCounterStore } from '@/stores/counter'
-import HelloWorld from './components/HelloWorld.vue'
-import VueQrcode from 'vue-qrcode'
+import { inputNomeStore } from '@/stores/input_nome'
+import QrCodeVue from './components/QrCodeVue.vue'
 
 
-const counter = useCounterStore()
+const inputNome = inputNomeStore()
 
 
 </script>
@@ -12,20 +11,12 @@ const counter = useCounterStore()
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <h1>Aqui e seu site vue para gerar o qr code escreva no input aqui <span>&darr;</span> </h1>
   </header>
 
   <main>
-    <h1>Counter: {{ counter.count }}</h1>
-    <h1>Couter double: {{ counter.doubleCount }}</h1>
-    <button @click="counter.increment()">Increment</button>
-    <vue-qrcode
-    value="https://www.1stg.me"
-    @change="onDataUrlChange"
-  />
+    <input type="text" v-model="inputNome.inputNome" >
+    <QrCodeVue :urlOpen="inputNome.inputNomeComputed"/>
   </main>
 </template>
 
@@ -39,6 +30,22 @@ header {
   margin: 0 auto 2rem;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: var(--section-gap);
+
+  input {
+    margin-top: 30px;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid var(black);
+    border-radius: 0.5rem;
+  }
+
+}
+
 @media (min-width: 1024px) {
   header {
     display: flex;
@@ -50,7 +57,7 @@ header {
     margin: 0 2rem 0 0;
   }
 
-  header .wrapper {
+  header {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;

@@ -1878,7 +1878,7 @@ punycode@^2.1.0:
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-2.3.1.tgz#027422e2faec0b25e1549c3e1bd8309b9133b6e5"
   integrity sha512-vYt7UD1U9Wg6138shLtLOvdAu+8DsC/ilFtEVHcH+wydcSpNE20AfSOduf6MkRFahL5FY7X1oU7nKVZFtfq8Fg==
 
-qrcode@^1.4.4:
+qrcode@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/qrcode/-/qrcode-1.5.3.tgz#03afa80912c0dccf12bc93f615a535aad1066170"
   integrity sha512-puyri6ApkEHYiVl4CFzo1tDkAZ+ATcnbJrJ6RiBM1Fhctdn/ix9MTE3hRph33omisEbC/2fcfemsseiKgBPKZg==
@@ -2147,6 +2147,13 @@ vue-eslint-parser@^9.3.1, vue-eslint-parser@^9.4.2:
     lodash "^4.17.21"
     semver "^7.3.6"
 
+vue-qrcode@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/vue-qrcode/-/vue-qrcode-2.2.2.tgz#c0b0ec16bd245100cdc87559349550fbf8463a9b"
+  integrity sha512-SbrXq/mSb1g2tbDyXPe9gy9KiMYsvxWKRErlpij1BqiFoHwQckheZV63CTw6yRLLUVG2RXAVlX+APkpdCK7SQQ==
+  dependencies:
+    tslib "^2.6.2"
+
 vue-template-compiler@^2.7.14:
   version "2.7.16"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.16.tgz#c81b2d47753264c77ac03b9966a46637482bb03b"
@@ -2163,13 +2170,6 @@ vue-tsc@^1.8.27:
     "@volar/typescript" "~1.11.1"
     "@vue/language-core" "1.8.27"
     semver "^7.5.4"
-
-vue3-qrcode@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/vue3-qrcode/-/vue3-qrcode-0.0.2.tgz#cab445ce328f592d9c65e38ba286d1710b6c12de"
-  integrity sha512-FmYZFVURDko4rHtRCN2BbAG4u1yCE14WZzVE1Nm8O5MoPibflAJs+4fDdTEjwUV/GRWhK+BT2z3IzjN9Lp1MPg==
-  dependencies:
-    qrcode "^1.4.4"
 
 vue@^3.4.15:
   version "3.4.21"
