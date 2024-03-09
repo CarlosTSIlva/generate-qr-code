@@ -11,11 +11,11 @@ const inputNome = inputNomeStore()
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-    <h1>Aqui e seu site vue para gerar o qr code escreva no input aqui <span>&darr;</span> </h1>
+    <h1>Aqui e seu site vue para gerar o qr code escreva no input aqui  </h1>
   </header>
 
   <main>
-    <input type="text" v-model="inputNome.inputNome" >
+    <input placeholder="Escreva aqui" type="text" v-model="inputNome.inputNome" >
     <QrCodeVue :urlOpen="inputNome.inputNomeComputed"/>
   </main>
 </template>
